@@ -275,4 +275,4 @@ def main(train_model=True):
         print(f"R² Score: {r2:.6f}")
 
 if __name__ == "__main__":
-    main(train_model=False)
+    main(train_model=True)
