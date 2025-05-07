@@ -151,11 +151,11 @@ def main(train_model=True):
         
     # Create N-BEATS model
     model = NBeatsNet(
-        stack_types=['seasonal', 'generic', 'generic'],
+        stack_types=['seasonal', 'generic'],
         nb_blocks_per_stack=2,
         forecast_length=forecast_size,
         backcast_length=input_size,
-        hidden_layer_units=256,
+        hidden_layer_units=128,
         thetas_dim=(4, 8, 8)
     )
     if train_model:
@@ -240,7 +240,7 @@ def main(train_model=True):
         plt.close()
 
         # Make predictions on test set
-        test_data = fetch_data(start_date='2024-01-01', end_date='2024-07-01')
+        test_data = fetch_data(start_date='2024-06-01', end_date='2025-01-01')
         rsi_test_data = test_data['RSI_norm']
         rsi_test_data = rsi_test_data.dropna()
 
@@ -276,4 +276,4 @@ def main(train_model=True):
         print(f"R² Score: {r2:.6f}")
 
 if __name__ == "__main__":
-    main(train_model=False)
+    main(train_model=True)
