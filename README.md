@@ -112,7 +112,7 @@ NBEATS-RSI-Forecasting/
 │   └── training_loss.png            # Loss convergence curves
 ├── nbeats_AAPL.pth                  # Equity-specific trained weights (AAPL)
 └── README.md
-🚀 Getting Started
+## 🚀 Getting Started
 1. Clone the Repository
 Bash
 git clone [https://github.com/MisguidedTrooper/NBEATS-RSI-Forecasting.git](https://github.com/MisguidedTrooper/NBEATS-RSI-Forecasting.git)
